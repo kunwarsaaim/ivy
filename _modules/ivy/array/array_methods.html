@@ -1036,6 +1036,21 @@
 <span class="sd">    ret</span>
 <span class="sd">        an array containing the inverse sine of each element in ``self``. The</span>
 <span class="sd">        returned array must have the same data type as ``self``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Using :code:`ivy.Array` instance method:</span>
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.array([-1., 1., 4., 0.8])</span>
+<span class="sd">    &gt;&gt;&gt; y = x.asin()</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    ivy.array([-1.57, 1.57, nan, 0.927])</span>
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.array([-3., -0.9, 1.5, 2.8])</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.zeros(4)</span>
+<span class="sd">    &gt;&gt;&gt; x.asin(out=y)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    ivy.array([nan, -1.12, nan, nan])</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
@@ -2905,11 +2920,7 @@
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="unstack"><a class="viewcode-back" href="../../../functional/ivy/general/unstack/unstack_array.html#ivy.array.array_methods.unstack">[docs]</a><span class="k">def</span> <span class="nf">unstack</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
-    <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<div class="viewcode-block" id="unstack"><a class="viewcode-back" href="../../../functional/ivy/general/unstack/unstack_array.html#ivy.array.array_methods.unstack">[docs]</a><span class="k">def</span> <span class="nf">unstack</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;ivy.Array instance method variant of ivy.unstack. This method simply</span>
 <span class="sd">    wraps the function, and so the docstring for ivy.unstack also applies to</span>
 <span class="sd">    this method with minimal changes.</span>
@@ -2927,20 +2938,7 @@
 <span class="sd">    -------</span>
 <span class="sd">    ret</span>
 <span class="sd">        List of arrays, unpacked along specified dimensions.</span>
-<span class="sd">    </span>
-<span class="sd">    Examples</span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([[1, 2], [3, 4]])</span>
-<span class="sd">    &gt;&gt;&gt; y = x.unstack(axis=0)</span>
-<span class="sd">    &gt;&gt;&gt; print(y)</span>
-<span class="sd">    [ivy.array([1, 3]), ivy.array([2, 4])]</span>
 
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([[1, 2], [3, 4]])</span>
-<span class="sd">    &gt;&gt;&gt; y = x.unstack(axis=1, keepdims=True)</span>
-<span class="sd">    &gt;&gt;&gt; print(y)</span>
-<span class="sd">    [ivy.array([[1], </span>
-<span class="sd">                [3]]), ivy.array([[2], </span>
-<span class="sd">                [4]])]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
